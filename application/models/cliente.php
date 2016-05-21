@@ -1,14 +1,14 @@
 <?php
-class Application_Model_Usuario extends Zend_Db_Table
+class Application_Model_Cliente extends Zend_Db_Table
 {
-    protected $_name   = 'usuario';
+    protected $_name   = 'cliente';
     
     public function gravar($dados)
     {
     	// Se tiver o id vai alterar, se não tiver, insere
-    	if(!empty($dados['id_usuario'])){
+    	if(!empty($dados['id_cliente'])){
 	    	// Resgatando registro no banco pelo ID
-    		$row = $this->fetchRow('id_usuario = ' . $dados['id_usuario']);
+    		$row = $this->fetchRow('id_cliente = ' . $dados['id_cliente']);
     	} else {
 	    	// Criando linha vazia
 	    	$row = $this->createRow();
@@ -23,6 +23,6 @@ class Application_Model_Usuario extends Zend_Db_Table
     
     public function excluir($dados)
     {
-    	$this->delete('id_usuario = ' . $dados['id_usuario']);
+    	$this->delete('id_cliente = ' . $dados['id_cliente']);
     }
 }
