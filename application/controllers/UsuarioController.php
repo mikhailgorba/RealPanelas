@@ -14,9 +14,12 @@ class UsuarioController extends Zend_Controller_Action
 	
 	public function gravarAction()
 	{
-		
+		$dados = $this->_getAllParams();
+        $modelUsuario = new Application_Model_Usuario();
         
+        $modelUsuario->gravar($dados);
         
+        $this->redirect('usuario/formulario');
 	}
     
     public function uploadFoto($id_usuario)
