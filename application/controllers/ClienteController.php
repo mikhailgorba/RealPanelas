@@ -17,6 +17,10 @@ class ClienteController extends Zend_Controller_Action
     {
        $dados = $this->_getAllParams(); 
         
+       $modelCliente = new Application_Model_Cliente();
+        
+        $modelCliente->gravar($dados);
+        
     }
 
 }
