@@ -21,6 +21,8 @@ class ClienteController extends Zend_Controller_Action
         
         $modelCliente->gravar($dados);
         
+        $this->redirect('cliente/formulario');
+        
     }
 
 }
