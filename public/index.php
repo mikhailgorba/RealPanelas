@@ -1,11 +1,11 @@
 <?php
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 session_start();
 
-=======
-session_start();
->>>>>>> 6bfecd6201a90cde0606afdb75b849a2fdfcde08
+//=======
+//session_start();
+//>>>>>>> 6bfecd6201a90cde0606afdb75b849a2fdfcde08
 // Define path to application directory
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
