@@ -5,18 +5,13 @@ class ClienteController extends Zend_Controller_Action
 
     public function formularioAction()
     {
-        // vá em views e crie o arquivo formulario.phtml
-        
-    //    TESTANDO GIT
+       
     }
 
-    public function indexAction()
+    public function listarAction()
     {
-        //die ('ss');
-        
-        echo '<input type="submit" value="Enviar"/>';
+       
     }
 
-//testando! cambio! heheheh kkkkkkk hehehehehe!
 }
 
