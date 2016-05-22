@@ -39,6 +39,12 @@ class UsuarioController extends Zend_Controller_Action
 	
 	public function excluirAction()
 	{
+        $dados = $this->_getAllParams();
+		$modelUsuario = new Application_Model_Usuario();
+		
+		$modelUsuario->excluir($dados);
+		
+		$this->redirect('usuario/listagem');
 		
 	}
     

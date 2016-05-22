@@ -2,7 +2,7 @@
 
 <form action="<?php echo $this->baseUrl('usuario/gravar'); ?>" method="post" >
 	
-	
+	<input type="hidden" class="form-control" id="nome" name="nome" value="<?php echo $this->row['id_usuario']; ?>">
 	
 	    <label for="nome">Nome</label>
 	    <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $this->row['nome']; ?>">
