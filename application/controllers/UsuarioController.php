@@ -49,7 +49,7 @@ class UsuarioController extends Zend_Controller_Action
          
     }
     
-    public function verificarEmailAction(){
+    public function listagemAction(){
         
         
     }
