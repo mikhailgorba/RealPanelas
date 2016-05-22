@@ -1,4 +1,4 @@
-﻿<h1>Listagem de Perfil</h1>
+<h1>Listagem de Perfil</h1>
 
 <a href="<?php echo $this->baseUrl('usuario/formulario'); ?>" >Inserir</a>
 
@@ -8,7 +8,8 @@
 		<td>Id</td>
 		<td>Nome</td>
 	</tr>
-	<?php foreach($this->rowSet as $row){ ?>
+	
+</table><?php foreach($this->rowSet as $row){ ?>
 		<tr>
 			<td>
 				<a href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" >Alterar</a>
@@ -18,4 +19,3 @@
 			<td><?php echo $row['nome']; ?></td>
 		</tr>
 	<?php } ?>
-</table>

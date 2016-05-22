@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 class UsuarioController extends Zend_Controller_Action
 {
@@ -10,6 +10,11 @@ class UsuarioController extends Zend_Controller_Action
 	public function formularioAction()
 	{
 		
+        
+        
+        
+        
+        
 	}
 	
 	public function gravarAction()
@@ -49,9 +54,12 @@ class UsuarioController extends Zend_Controller_Action
          
     }
     
-    public function verificarEmailAction(){
+    public function listagemAction(){
         
-        
+       $modelUsuario = new Application_Model_Usuario();
+		
+		$rowSet = $modelUsuario->fetchAll();
+		$this->view->rowSet = $rowSet; 
     }
 }
 
