@@ -55,15 +55,13 @@ class UsuarioController extends Zend_Controller_Action
     }
     
     public function listagemAction(){
-<<<<<<< HEAD
-=======
-        
->>>>>>> origin/master
-        
+
        $modelUsuario = new Application_Model_Usuario();
 		
 		$rowSet = $modelUsuario->fetchAll();
 		$this->view->rowSet = $rowSet; 
+        
+        
     }
 }
 
