@@ -9,7 +9,17 @@ class UsuarioController extends Zend_Controller_Action
 	
 	public function formularioAction()
 	{
+        $dados = $this->_getAllParams();
 		
+		$modelUsuario = new Application_Model_Usuario();
+		
+		if(!empty($dados['id_usuario'])){
+			$row = $modelUsuario->fetchRow('id_usuario = ' . $dados['id_usuario']);
+		} else {
+			$row = $modelUsuario->createRow();
+		}
+		
+		$this->view->row = $row;
 	}
 	
 	public function gravarAction()
