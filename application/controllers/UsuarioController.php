@@ -27,7 +27,9 @@ class UsuarioController extends Zend_Controller_Action
 		$dados = $this->_getAllParams();
         $modelUsuario = new Application_Model_Usuario();
         
-        $modelUsuario->gravar($dados);
+        $id_usuario = $modelUsuario->gravar($dados);
+        
+        $modelUsuario->update("id_usuario = $id_usuario");
         
         $this->redirect('usuario/listagem');
 	}
