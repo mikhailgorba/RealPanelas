@@ -4,8 +4,7 @@
 <table class="table table-striped">
 	
     <thead>
-      <tr>
-        <th>ID</th>  
+      <tr>  
         <th>Nome</th>
         <th>E-mail</th>
         <th>Telefone</th>
@@ -15,7 +14,6 @@
 
 	<?php foreach($this->rowSet as $row){ ?>
        <tr>
-         <td><?php echo $row['id_usuario']; ?></td>
          <td><?php echo $row['nome']; ?></td>
          <td><?php echo $row['email']; ?></td>
          <td><?php echo $row['telefone']; ?></td>
