@@ -1,4 +1,4 @@
- <?php
+<?php
 
 class UsuarioController extends Zend_Controller_Action
 {
@@ -10,11 +10,6 @@ class UsuarioController extends Zend_Controller_Action
 	public function formularioAction()
 	{
 		
-        
-        
-        
-        
-        
 	}
 	
 	public function gravarAction()
@@ -24,7 +19,7 @@ class UsuarioController extends Zend_Controller_Action
         
         $modelUsuario->gravar($dados);
         
-        $this->redirect('usuario/formulario');
+        $this->redirect('usuario/listagem');
 	}
     
     public function uploadFoto($id_usuario)
@@ -55,13 +50,8 @@ class UsuarioController extends Zend_Controller_Action
     }
     
     public function listagemAction(){
-
-       $modelUsuario = new Application_Model_Usuario();
-		
-		$rowSet = $modelUsuario->fetchAll();
-		$this->view->rowSet = $rowSet; 
         
-        
+        $modelCliente = new Application_Model_Usuario();
     }
 }
 

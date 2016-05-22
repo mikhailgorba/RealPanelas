@@ -1,23 +1,29 @@
-<h1>Listagem de Perfil</h1>
+<h1>Usuários cadastrados</h1>
 
-<a href="<?php echo $this->baseUrl('usuario/formulario'); ?>" >Inserir</a>
 
 <table class="table table-striped">
-	<tr>
-		<td>Ações</td>
-		<td>Id</td>
-		<td>Nome</td>
-	</tr>
+	
+    <thead>
+      <tr>
+        <th>ID</th>  
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
 
 	<?php foreach($this->rowSet as $row){ ?>
-		<tr>
-			<td>
-				<a href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" >Alterar</a>
-				<a href="<?php echo $this->baseUrl('usuario/excluir/id_usuario/' . $row['id_usuario']); ?>" >Excluir</a>
-			</td>
-			<td><?php echo $row['id_usuario']; ?></td>
-			<td><?php echo $row['nome']; ?></td>
-		</tr>
+       <tr>
+         <td><?php echo $row['id_usuario']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['email']; ?></td>
+         <td><?php echo $row['telefone']; ?></td>
+         <td>
+             <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
+             <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('usuario/excluir/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+       </tr>
 	<?php } ?>
     
 </table>
