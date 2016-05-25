@@ -8,11 +8,15 @@ class ProdutoController extends Zend_Controller_Action
      
     }
 
-    public function cadastrarAction()
+    public function formularioAction()
     {
         
     }
-
+    
+    public function gravarAction()
+    {
+        
+    }
 
 }
 
