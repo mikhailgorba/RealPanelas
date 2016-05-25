@@ -27,11 +27,11 @@ class UsuarioController extends Zend_Controller_Action
 		$dados = $this->_getAllParams();
         $modelUsuario = new Application_Model_Usuario();
         
-        $id_usuario = $modelUsuario->gravar($dados);
-        
-        $modelUsuario->update("id_usuario = $id_usuario");
+
+        $modelUsuario->gravar($dados);
         
         $this->redirect('usuario/listagem');
+        
 	}
     
     public function uploadFoto($id_usuario)
