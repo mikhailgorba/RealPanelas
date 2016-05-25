@@ -1,23 +1,46 @@
-<h1>Listagem de Perfil</h1>
+<h1>Listagem de Clientes</h1>
 
 <a href="<?php echo $this->baseUrl('cliente/formulario'); ?>" >Inserir</a>
 
 <table class="table table-striped">
-	<tr>
-		<td>Ações</td>
-		<td>Id</td>
-		<td>Nome</td>
-	</tr>
+	
+    <thead>
+      <tr>  
+        <th>Nome</th>
+        <th>Código</th>
+        <th>CPF</th>
+        <th>Data de nascimento</th>
+        <th>Endereço</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Telefone 2</th>
+        <th>Telefone 3</th>
+        <th>Tipo</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
 
 	<?php foreach($this->rowSet as $row){ ?>
-		<tr>
-			<td>
-				<a href="<?php echo $this->baseUrl('cliente/formulario/id_cliente/' . $row['id_cliente']); ?>" >Alterar</a>
-				<a href="<?php echo $this->baseUrl('cliente/excluir/id_cliente/' . $row['id_cliente']); ?>" >Excluir</a>
-			</td>
-			<td><?php echo $row['id_cliente']; ?></td>
-			<td><?php echo $row['nome']; ?></td>
-		</tr>
+       <tr>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['email']; ?></td>
+         <td><?php echo $row['telefone']; ?></td>
+         <td>
+             <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
+             <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('usuario/excluir/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+       </tr>
 	<?php } ?>
     
 </table>
+
