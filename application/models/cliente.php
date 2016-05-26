@@ -6,9 +6,9 @@ class Application_Model_Cliente extends Zend_Db_Table
     public function gravar($dados)
     {
     	// Se tiver o id vai alterar, se não tiver, insere
-    	if(!empty($dados['id_cliente'])){
+    	if(!empty($dados['id_clientes'])){
 	    	// Resgatando registro no banco pelo ID
-    		$row = $this->fetchRow('id_cliente = ' . $dados['id_cliente']);
+    		$row = $this->fetchRow('id_clientes = ' . $dados['id_clientes']);
     	} else {
 	    	// Criando linha vazia
 	    	$row = $this->createRow();
@@ -23,6 +23,6 @@ class Application_Model_Cliente extends Zend_Db_Table
     
     public function excluir($dados)
     {
-    	$this->delete('id_cliente = ' . $dados['id_cliente']);
+    	$this->delete('id_clientes = ' . $dados['id_clientes']);
     }
 }

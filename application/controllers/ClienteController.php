@@ -28,5 +28,15 @@ class ClienteController extends Zend_Controller_Action
         
     }
 
+    public function excluirAction()
+	{
+        $dados = $this->_getAllParams();
+		$modelCliente = new Application_Model_Cliente();
+		
+		$modelCliente->excluir($dados);
+		
+		$this->redirect('cliente/listar');
+		
+	}
 }
 
