@@ -3,10 +3,17 @@
 <form action="<?php echo $this->baseUrl('cliente/gravar'); ?>" method="post">
 	
 	
+	  
+	    <input type="hidden" type="text"   name="id_clientes" value="<?php echo $this->row['id_clientes']; ?>">
+	
+    
+    
 	<div class="form-group">
 	    <label for="nome">Nome do Cliente: </label>
 	    <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $this->row['nome']; ?>">
 	</div>
+    
+    
 	
 	<!--<div class="form-group">
 	    <label for="codigo">Codigo: </label>
