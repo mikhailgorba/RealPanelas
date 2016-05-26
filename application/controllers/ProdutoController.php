@@ -34,7 +34,7 @@ class ProdutoController extends Zend_Controller_Action
     
     public function gravarAction()
     {
-      $dados = $this->_getAllParams();
+      $dados = $this->_getAllParams(); 
         $modelProduto = new Application_Model_Produto();
         
 
@@ -45,3 +45,4 @@ class ProdutoController extends Zend_Controller_Action
 
 }
 
+ 

@@ -1,8 +1,0 @@
-<?php 
-
-class Application_Model_foto extends Zend_Db_Table
-{
-    protected $_name = 'foto';
-    
-   
-}
