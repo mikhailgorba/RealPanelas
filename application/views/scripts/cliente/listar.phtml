@@ -12,11 +12,10 @@
         <th>Data de nascimento</th>
         <th>Endereço</th>
         <th>E-mail</th>
-        <th>Telefone</th>
+        <th>Telefone 1</th>
         <th>Telefone 2</th>
         <th>Telefone 3</th>
         <th>Tipo</th>
-        <th>Nome</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -24,20 +23,20 @@
 	<?php foreach($this->rowSet as $row){ ?>
        <tr>
          <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['codigo']; ?></td>
+         <td><?php echo $row['cpf']; ?></td>
+         <td><?php echo $row['data_nascimento']; ?></td>
+         <td><?php echo $row['endereco']; ?></td>
          <td><?php echo $row['email']; ?></td>
-         <td><?php echo $row['telefone']; ?></td>
+         <td><?php echo $row['tel1']; ?></td>
+         <td><?php echo $row['tel2']; ?></td>
+         <td><?php echo $row['tel3']; ?></td>
+         <td><?php echo $row['cliente_tipo']; ?></td>
+       
+       
          <td>
-             <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
-             <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('usuario/excluir/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+             <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('cliente/formulario/id_clientes/' . $row['id_clientes']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
+             <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('cliente/excluir/id_clientes/' . $row['id_clientes']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>
         </td>
        </tr>
 	<?php } ?>
