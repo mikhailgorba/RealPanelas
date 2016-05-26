@@ -30,7 +30,7 @@ class UsuarioController extends Zend_Controller_Action
 
         $modelUsuario->gravar($dados);
         
-        $this->redirect('usuario/listagem');
+        $this->redirect('usuario/listar');
         
 	}
     
@@ -46,7 +46,7 @@ class UsuarioController extends Zend_Controller_Action
 		
 		$modelUsuario->excluir($dados);
 		
-		$this->redirect('usuario/listagem');
+		$this->redirect('usuario/listar');
 		
 	}
     
@@ -67,7 +67,7 @@ class UsuarioController extends Zend_Controller_Action
          
     }
     
-    public function listagemAction(){
+    public function listarAction(){
         
        $modelUsuario = new Application_Model_Usuario();
 		
