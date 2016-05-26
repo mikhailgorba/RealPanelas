@@ -25,6 +25,7 @@ class ProdutoController extends Zend_Controller_Action
 	{
         $dados = $this->_getAllParams();
 		$modelProduto = new Application_Model_Produto();
+        
 		
 		$modelProduto->excluir($dados);
 		
@@ -36,9 +37,10 @@ class ProdutoController extends Zend_Controller_Action
     {
       $dados = $this->_getAllParams(); 
         $modelProduto = new Application_Model_Produto();
-        
+        $modelFoto = new Application_Model_Foto();
 
         $modelProduto->gravar($dados);
+        $modelFoto->gravar($dados);
         
         $this->redirect('produto/pesquisar');  
     }
