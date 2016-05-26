@@ -10,7 +10,10 @@ class ClienteController extends Zend_Controller_Action
 
     public function listarAction()
     {
-       
+        $modelCliente = new Application_Model_Cliente();
+		
+		$rowSet = $modelCliente->fetchAll();
+		$this->view->rowSet = $rowSet; 
     }
     
     public function gravarAction()
