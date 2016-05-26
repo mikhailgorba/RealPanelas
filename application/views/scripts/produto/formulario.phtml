@@ -2,59 +2,52 @@
 
 <h2>Página em construção</h2>
 
-<form action="<?php echo $this->baseUrl('usuario/gravar'); ?>" method="post" enctype="multipart/form-data">
-	<input type="hidden" name="id_usuario" value="<?php echo $this->row['id_usuario']; ?>" />
+<form action="<?php echo $this->baseUrl('produto/gravar'); ?>" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id_produto" value="<?php echo $this->row['id_produto']; ?>" />
 	
 	<div class="form-group">
 	    <label for="nome">Nome</label>
 	    <input type="text" class="form-control" id="nome" name="nome" value="<?php echo $this->row['nome']; ?>">
 	</div>
-	
-	<div class="form-group">
-	    <label for="telefone">Telefone</label>
-	    <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo $this->row['telefone']; ?>">
-	</div>
-	
-	<div class="form-group">
-	    <label for="perfil">Perfil</label>
-    	<select class="form-control" id="id_perfil" name="id_perfil">
-    		<option value="">Selecione</option>
-    		<?php foreach($this->rowSetPerfil as $rowPerfil){ ?>
-    			<option <?php echo $this->row['id_perfil'] == $rowPerfil['id_perfil'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowPerfil['id_perfil']; ?>"><?php echo $rowPerfil['nome']; ?></option>
-    		<?php } ?>
-    	</select>
+    
+    <div class="form-group">
+	    <label for="preco">Preço</label>
+	    <input type="text" class="form-control" id="preco" name="preco" value="<?php echo $this->row['preco']; ?>">
 	</div>
     
     <div class="form-group">
-	    <label for="uf">Uf</label>
-    	<select class="form-control" id="id_uf" name="id_uf">
-    		<option value="">Selecione</option>
-    		<?php foreach($this->rowSetUf as $rowUf){ ?>
-    			<option <?php echo $this->row['id_uf'] == $rowUf['id_uf'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowUf['id_uf']; ?>"><?php echo $rowUf['nome']; ?></option>
-    		<?php } ?>
-    	</select>
+	    <label for="codigo">Codigo</label>
+	    <input type="text" class="form-control" id="codigo" name="codigo" value="<?php echo $this->row['codigo']; ?>">
 	</div>
     
     <div class="form-group">
-	    <label for="municipio">Municipio</label>
-        <div id="div_municipios">        
-    	   <select class="form-control" id="id_municipio" name="id_municipio">
-    		  <option value="">Selecione</option>
-    		      <?php foreach($this->rowSetMunicipio as $rowMunicipio){ ?>
-                <option <?php echo $this->row['id_municipio'] == $rowMunicipio['id_municipio'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowMunicipio['id_municipio']; ?>"><?php echo $rowMunicipio['nome']; ?></option>
-    		      <?php } ?>
-    	   </select>
-        </div>
+	    <label for="marca">Marca</label>
+	    <input type="text" class="form-control" id="marca" name="marca" value="<?php echo $this->row['marca']; ?>">
 	</div>
-	
-	<div class="form-group">
-	    <label for="email">E-mail</label>
-	    <input type="text" class="form-control" id="email" name="email" value="<?php echo $this->row['email']; ?>">
+    
+    <div class="form-group">
+	    <label for="altura">Altura</label>
+	    <input type="text" class="form-control" id="altura" name="altura" value="<?php echo $this->row['altura']; ?>">
 	</div>
-	
-	<div class="form-group">
-	    <label for="senha">Senha</label>
-	    <input type="password" class="form-control" id="senha" name="senha" value="<?php echo $this->row['senha']; ?>">
+    
+    <div class="form-group">
+	    <label for="diametro">Diametro</label>
+	    <input type="text" class="form-control" id="diametro" name="diametro" value="<?php echo $this->row['diametro']; ?>">
+	</div>
+    
+    <div class="form-group">
+	    <label for="cor">Cor</label>
+	    <input type="text" class="form-control" id="cor" name="cor" value="<?php echo $this->row['cor']; ?>">
+	</div>
+    
+    <div class="form-group">
+	    <label for="espassura">Espessura</label>
+	    <input type="text" class="form-control" id="espassura" name="espassura" value="<?php echo $this->row['espassura']; ?>">
+	</div>
+    
+    <div class="form-group">
+	    <label for="tipo_id_tipo">Tipo</label>
+	    <input type="text" class="form-control" id="tipo_id_tipo" name="tipo_id_tipo" value="<?php echo $this->row['tipo_id_tipo']; ?>">
 	</div>
     
     <div class="form-group">
