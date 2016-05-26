@@ -1,36 +1,46 @@
-<style>
-    a:link,
-    a:visited
-    {
-        color: #0398CA;
-    }
+<h1>Listagem de Clientes</h1>
 
-    span#zf-name
-    {
-        color: #91BE3F;
-    }
+<a href="<?php echo $this->baseUrl('cliente/formulario'); ?>" >Inserir</a>
 
-    div#welcome
-    {
-        color: #FFFFFF;
-        background-image: url(http://framework.zend.com/images/bkg_header.jpg);
-        width:  600px;
-        height: 400px;
-        border: 2px solid #444444;
-        overflow: hidden;
-        text-align: center;
-    }
+<table class="table table-striped">
+	
+    <thead>
+      <tr>  
+        <th>Nome</th>
+        <th>Código</th>
+        <th>CPF</th>
+        <th>Data de nascimento</th>
+        <th>Endereço</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+        <th>Telefone 2</th>
+        <th>Telefone 3</th>
+        <th>Tipo</th>
+        <th>Nome</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
 
-    div#more-information
-    {
-        background-image: url(http://framework.zend.com/images/bkg_body-bottom.gif);
-        height: 100%;
-    }
-</style>
-<div id="welcome">
-    <h1>Arquivo Index do Controller Cliente <span id="zf-name">Zend Framework!</span></h1>
-
+	<?php foreach($this->rowSet as $row){ ?>
+       <tr>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['nome']; ?></td>
+         <td><?php echo $row['email']; ?></td>
+         <td><?php echo $row['telefone']; ?></td>
+         <td>
+             <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('usuario/formulario/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
+             <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('usuario/excluir/id_usuario/' . $row['id_usuario']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+        </td>
+       </tr>
+	<?php } ?>
     
-        </p>
-    </div>
-</div>
+</table>
+

@@ -8,7 +8,7 @@ class ClienteController extends Zend_Controller_Action
       
     }
 
-    public function listagemAction()
+    public function listarAction()
     {
        
     }
