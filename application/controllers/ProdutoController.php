@@ -13,6 +13,14 @@ class ProdutoController extends Zend_Controller_Action
         
     }
     
+    public function listarAction(){
+        
+       $modelProduto = new Application_Model_Produto();
+		
+		$rowSet = $modelProduto->fetchAll();
+		$this->view->rowSet = $rowSet; 
+    }
+    
     public function excluirAction()
 	{
         $dados = $this->_getAllParams();
@@ -20,7 +28,7 @@ class ProdutoController extends Zend_Controller_Action
 		
 		$modelProduto->excluir($dados);
 		
-		$this->redirect('produto/listar');
+		$this->redirect('produto/pesquisar');
 		
 	}
     
@@ -32,7 +40,7 @@ class ProdutoController extends Zend_Controller_Action
 
         $modelProduto->gravar($dados);
         
-        $this->redirect('produto/listar');  
+        $this->redirect('produto/pesquisar');  
     }
 
 }
