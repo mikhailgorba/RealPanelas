@@ -67,7 +67,7 @@ class UsuarioController extends Zend_Controller_Action
          
     }
     
-    public function listarAction(){
+    public function pesquisarAction(){
         
        $modelUsuario = new Application_Model_Usuario();
 		

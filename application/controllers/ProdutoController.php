@@ -44,18 +44,17 @@ class ProdutoController extends Zend_Controller_Action
     
     public function gravarAction()
     {
+       
+                
         $dados = $this->_getAllParams(); 
+        
         $modelProduto = new Application_Model_Produto();
-
+        
         $modelProduto->gravar($dados);
         
-        if(!empty($dados['id_produto'])){
-			$row = $modelProduto->fetchRow('id_produto = ' . $dados['id_produto']);
-		} else {
-			$row = $modelProduto->createRow();
-        $this->view->row = $row;
+        $this->redirect('produto/pesquisar');
+            
         
         }
     }
    
- }
