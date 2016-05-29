@@ -7,6 +7,15 @@ class UsuarioController extends Zend_Controller_Action
 		
 	}
 	
+    
+     public function listarAction()
+    {
+        $modelUsuario = new Application_Model_Usuario();
+		
+		$rowSet = $modelUsuario->fetchAll();
+		$this->view->rowSet = $rowSet; 
+    }
+    
 	public function formularioAction()
 	{
         $dados = $this->_getAllParams();
@@ -67,7 +76,7 @@ class UsuarioController extends Zend_Controller_Action
          
     }
     
-    public function listarAction(){
+    public function pesquisarAction(){
         
        $modelUsuario = new Application_Model_Usuario();
 		
