@@ -35,11 +35,12 @@ class ProdutoController extends Zend_Controller_Action
     
     public function gravarAction()
     {
-      $dados = $this->_getAllParams(); 
+        $dados = $this->_getAllParams(); 
         $modelProduto = new Application_Model_Produto();
         $modelFoto = new Application_Model_Foto();
 
         $modelProduto->gravar($dados);
+                    
         $modelFoto->gravar($dados);
         
         $this->redirect('produto/pesquisar');  
