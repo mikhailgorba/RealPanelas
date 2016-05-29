@@ -36,16 +36,6 @@ class ProdutoController extends Zend_Controller_Action
     }
     
         
-    public function gravarAction()
-    {
-       $dados = $this->_getAllParams(); 
-        
-       $modelProduto = new Application_Model_Produto();
-        
-        $modelProduto->gravar($dados);
-        
-        $this->redirect('produto/listar');
-        
         
     public function excluirAction()
 	{
@@ -63,41 +53,14 @@ class ProdutoController extends Zend_Controller_Action
     {
         $dados = $this->_getAllParams(); 
         $modelProduto = new Application_Model_Produto();
-        $modelFoto = new Application_Model_Foto();
+       // $modelFoto = new Application_Model_Foto();
 
         $modelProduto->gravar($dados);
                     
-        $modelFoto->gravar($dados);
+       // $modelFoto->gravar($dados);
         
         $this->redirect('produto/pesquisar');  
     }
 
-}
-_______________________________________
-    class ClienteController extends Zend_Controller_Action
-
-    
-    public function gravarAction()
-    {
-       $dados = $this->_getAllParams(); 
-        
-       $modelCliente = new Application_Model_Cliente();
-        
-        $modelCliente->gravar($dados);
-        
-        $this->redirect('cliente/listar');
-        
-    }
-
-    public function excluirAction()
-	{
-        $dados = $this->_getAllParams();
-		$modelCliente = new Application_Model_Cliente();
-		
-		$modelCliente->excluir($dados);
-		
-		$this->redirect('cliente/listar');
-		
-	}
-}
- 
+     
+ }
