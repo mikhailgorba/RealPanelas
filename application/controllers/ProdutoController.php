@@ -27,8 +27,10 @@ class ProdutoController extends Zend_Controller_Action
 			$row = $modelProduto->fetchRow('id_produto = ' . $dados['id_produto']);
 		} else {
 			$row = $modelProduto->createRow();
-    }
+        }        
         $this->view->row = $row;
+        $modelTipo = new Application_Model_Tipo();
+		$this->view->rowSetTipo = $modelTipo->fetchAll(null, 'nome');
 	} 
         
     public function excluirAction()
