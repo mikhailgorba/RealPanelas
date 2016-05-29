@@ -1,8 +1,8 @@
 
-<form method="post" enctype="multipart/form-data" action="salvarFoto">
+<form method="post" enctype="multipart/form-data" action="<?php echo $this->baseUrl('produto/salvar'); ?>">
 
 <div class="form-group">
-        <input type="hidden" value="<?php echo $this->id_produto; ?>" />
+        <input type="hidden" value="<?php echo $this->id_produto; ?>" name="produto_id_produto" />
 	    <label for="foto">Foto</label>
 	    <input type="file" class="form-control" id="foto" name="foto"  value="<?php echo $this->row['foto']; ?>">
 </div>
