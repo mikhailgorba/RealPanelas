@@ -58,8 +58,3 @@ class ProdutoController extends Zend_Controller_Action
         }
     }
    
-<<<<<<< HEAD
-=======
- }
-}
->>>>>>> origin/master
