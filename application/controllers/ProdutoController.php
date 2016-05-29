@@ -3,7 +3,7 @@
 class ProdutoController extends Zend_Controller_Action
 {
 
-    public function upLoadAction()
+    public function uploadAction()
     {
      
     }
@@ -40,11 +40,11 @@ class ProdutoController extends Zend_Controller_Action
     {
        $dados = $this->_getAllParams(); 
         
-       $modelCliente = new Application_Model_Cliente();
+       $modelProduto = new Application_Model_Produto();
         
-        $modelCliente->gravar($dados);
+        $modelProduto->gravar($dados);
         
-        $this->redirect('cliente/listar');
+        $this->redirect('produto/listar');
         
         
     public function excluirAction()
