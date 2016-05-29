@@ -59,3 +59,4 @@ class ProdutoController extends Zend_Controller_Action
     }
    
  }
+}
