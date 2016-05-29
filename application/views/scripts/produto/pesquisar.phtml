@@ -10,14 +10,11 @@
         <th>Preço</th>
         <th>Código</th>
         <th>Marca</th>
-        <th>Endereço</th>
-        <th>Preço</th>
         <th>Altura</th>
         <th>Diametro</th>
         <th>Cor</th>
         <th>Espessura</th>
-        <th>Diametros</th>
-        <th>Cor</th>
+        <th>Tipo</th>
         <th>Ações</th>
       </tr>
     </thead>
@@ -25,20 +22,14 @@
 	<?php foreach($this->rowSet as $row){ ?>
        <tr>
          <td><?php echo $row['nome']; ?></td>
-         <td><?php echo $row['id_produto']; ?></td>
          <td><?php echo $row['preco']; ?></td>
          <td><?php echo $row['codigo']; ?></td>
          <td><?php echo $row['marca']; ?></td>
-         <td><?php echo $row['preco']; ?></td>
          <td><?php echo $row['altura']; ?></td>
          <td><?php echo $row['diametro']; ?></td>
          <td><?php echo $row['cor']; ?></td>
          <td><?php echo $row['espessura']; ?></td>
-         <td><?php echo $row['diametro']; ?></td>
-         <td><?php echo $row['cor']; ?></td>
          <td><?php echo $row['tipo_id_tipo']; ?></td>
-       
-       
          <td>
              <a title="ALTERAR" class="btn btn-info" href="<?php echo $this->baseUrl('produto/formulario/id_produto/' . $row['id_produto']); ?>" ><span class="glyphicon glyphicon-pencil">  </span></a>
              <a title="EXCLUIR" class="btn btn-danger" href="<?php echo $this->baseUrl('produto/excluir/id_produto/' . $row['id_produto']); ?>" ><span class="glyphicon glyphicon-trash"></span></a>

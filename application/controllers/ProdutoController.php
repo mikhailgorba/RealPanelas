@@ -55,7 +55,7 @@ class ProdutoController extends Zend_Controller_Action
 			$row = $modelProduto->createRow();
         $this->view->row = $row;
         
-
+        }
     }
    
  }
