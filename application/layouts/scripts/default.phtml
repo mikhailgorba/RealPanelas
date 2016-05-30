@@ -10,7 +10,19 @@
     <!-- Mainly scripts -->
     <script src="<?php echo $this->baseUrl('js/jquery-2.2.3.js'); ?>"></script>
     <script src="<?php echo $this->baseUrl('js/bootstrap/js/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo $this->baseUrl('js/jquery.maskedinput.js'); ?>"></script>
+    <script src="<?php echo $this->baseUrl('js/jquery.maskMoney.min.js'); ?>"></script>
 
+    <script type="text/javascript">
+        jQuery(function($){
+            $("#cpf").mask("999.999.999-99");
+            $("#tel1").mask("(99)9999.9999");
+            $("#tel2").mask("(99)9999.9999");
+            $("#tel3").mask("(99)9999.9999");
+            
+            
+              });
+    </script>
     <?php echo $this->headScript(); ?>
     
        
@@ -33,6 +45,8 @@
             height:1000px;  
         }
     </style>
+    
+    
     
 </head>
 
