@@ -31,6 +31,9 @@ class ProdutoController extends Zend_Controller_Action
 			$row = $modelProduto->createRow();
     }
         $this->view->row = $row;
+        
+        $modelTipo = new Application_Model_Tipo();
+		$this->view->rowSetTipo = $modelTipo->fetchAll(null, 'nome');
 	} 
         
     public function excluirAction()
@@ -78,7 +81,8 @@ class ProdutoController extends Zend_Controller_Action
         
             $origem = $_FILES['foto']['tmp_name'];
             $extensao = substr($_FILES['foto']['name'], strrpos($_FILES['foto']['name'], '.'));
-            $destino = 'img/fotos/foto_' . $produto_id_produto . $extensao;
+            $nome = $_FILES['foto']['name'];
+            $destino = 'img/fotos/foto_' .$nome. '_id_'.$produto_id_produto . '_id_' . $extensao;
             
             move_uploaded_file($origem, $destino);
             return $id_produto . $extensao;
