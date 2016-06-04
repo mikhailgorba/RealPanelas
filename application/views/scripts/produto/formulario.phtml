@@ -43,19 +43,17 @@
 	    <input type="text" class="form-control" id="espessura" name="espessura" value="<?php echo $this->row['espessura']; ?>">
 	</div>
     
-    
-<<<<<<< HEAD
+
     <div class="form-group">
 	    <label for="tipo_id_tipo">Tipo</label>
     	<select class="form-control" id="tipo_id_tipo" name="tipo_id_tipo">
     		<option value="">Selecione</option>
     		<?php foreach($this->rowSetTipo as $rowTipo){ ?>
-    			<option <?php echo $this->row['tipo_id_tipo'] == $rowTipo['id_tipo'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowTipo['id_tipo']; ?>"><?php echo $rowTipo['nome']; ?></option>
+    			<option <?php echo $this->row['id_tipo'] == $rowTipo['id_tipo'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowTipo['id_tipo']; ?>"><?php echo $rowTipo['nome']; ?></option>
     		<?php } ?>
     	</select>
 	</div>
-	
-=======
+
     </select>
 
     
@@ -69,8 +67,7 @@
     	</select>
     </div>
 
-    
->>>>>>> origin/master
+
 	<div class="text-center">
 		<input type="submit" value="Enviar" class="btn btn-success" />
 		<a href="<?php echo $this->baseUrl('produto/pesquisar'); ?>" class="btn btn-danger" >Voltar</a>
