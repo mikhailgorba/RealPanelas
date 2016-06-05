@@ -61,7 +61,7 @@ class UsuarioController extends Zend_Controller_Action
           //   $_SESSION['id_perfil'] = $rowUsuario ['id_perfil'];
              
              $_SESSION['mensagem'] = 'Usuario logado com sucesso!';
-             $this->redirect('usuario/index');
+             $this->redirect('usuario/listar');
           }else{
              $_SESSION['mensagem'] = 'E-mail ou Senha Invalidos!';
              $this->redirect('usuario/login');
