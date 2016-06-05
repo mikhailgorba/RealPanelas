@@ -49,7 +49,8 @@ class UsuarioController extends Zend_Controller_Action
 		 $dados = $this->_getAllParams();
        
          $email = $dados ["email"];
-         $senha = md5($dados ["senha"]);
+         $senha = $dados ["senha"];
+     //    $senha = md5($dados ["senha"]);
        
          $modelUsuario = new Application_Model_Usuario();
          $rowUsuario = $modelUsuario->fetchRow("email = '$email' and senha = '$senha'"); 
@@ -57,15 +58,16 @@ class UsuarioController extends Zend_Controller_Action
          if($rowUsuario){
              $_SESSION['id_usuario'] = $rowUsuario ['id_usuario'];
              $_SESSION['nome'] = $rowUsuario ['nome'];
-             $_SESSION['id_perfil'] = $rowUsuario ['id_perfil'];
+          //   $_SESSION['id_perfil'] = $rowUsuario ['id_perfil'];
              
              $_SESSION['mensagem'] = 'Usuario logado com sucesso!';
-             $this->redirect('perfil/index');
+             $this->redirect('usuario/index');
           }else{
              $_SESSION['mensagem'] = 'E-mail ou Senha Invalidos!';
              $this->redirect('usuario/login');
              
          }
+    
      }
     
     public function uploadFoto($id_usuario)
