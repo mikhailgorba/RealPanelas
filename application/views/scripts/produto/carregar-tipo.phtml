@@ -1,0 +1,6 @@
+    	<select class="form-control" id="tipo_id_tipo" name="tipo_id_tipo">
+    		<option value="">Selecione</option>
+    		<?php foreach($this->rowSetTipo as $rowTipo){ ?>
+    			<option <?php echo $this->row['tipo_id_tipo'] == $rowTipo['id_tipo'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowTipo['id_tipo']; ?>"><?php echo $rowTipo['nome']; ?></option>
+    		<?php } ?>
+    	</select>

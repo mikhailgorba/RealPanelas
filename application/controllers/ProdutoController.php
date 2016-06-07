@@ -32,9 +32,22 @@ class ProdutoController extends Zend_Controller_Action
         }        
         $this->view->row = $row;
         
+        $modelLinha = new Application_Model_Linha();
+		$this->view->rowSetLinha = $modelLinha->fetchAll(null, 'nome');
+        
         $modelTipo = new Application_Model_Tipo();
-		$this->view->rowSetTipo = $modelTipo->fetchAll(null, 'nome');
+		$this->view->rowSetTipo = $modelTipo->fetchAll("linha_id_linha = '{$row->linha_id_linha}'", 'nome');
+        
 	} 
+    
+    public function carregarTipoAction(){
+        
+        $this->_helper->layout->disableLayout();
+        $dados = $this->_getAllParams();
+        $modelTipo = new Application_Model_Tipo();
+		$this->view->rowSetTipo = $modelTipo->fetchAll("linha_id_linha ='{$dados['id_linha']}'", 'nome');
+
+    }
         
     public function excluirAction()
 	{

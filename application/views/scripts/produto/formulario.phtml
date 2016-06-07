@@ -59,19 +59,23 @@
     
     
 
-    <div class="form-group">
-	    <label for="tipo_id_tipo">Tipo</label>
-    	<select class="form-control" id="tipo_id_tipo" name="tipo_id_tipo">
+   
+    
+      <div class="form-group">
+	    <label for="id_linha">Linha</label>
+          <div id="id_linha"> 
+    	<select class="form-control" id="id_linha" name="id_linha">
     		<option value="">Selecione</option>
-    		<?php foreach($this->rowSetTipo as $rowTipo){ ?>
-    			<option <?php echo $this->row['tipo_id_tipo'] == $rowTipo['id_tipo'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowTipo['id_tipo']; ?>"><?php echo $rowTipo['nome']; ?></option>
+    		<?php foreach($this->rowSetLinha as $rowLinha){ ?>
+    			<option <?php echo $this->row['linha_id_linha'] == $rowLinha['id_linha'] ? 'selected="selected"' : ''; ?> value="<?php echo $rowLinha['id_linha']; ?>"><?php echo $rowLinha['nome']; ?></option>
     		<?php } ?>
     	</select>
+        </div>
 	</div>
     
     <div class="form-group">
-	    <label for="municipio">Tipo2</label>
-        <div id="tipo_id_tipo">        
+	    <label for="tipo">Tipo2</label>
+        <div id="div_tipos">        
     	   <select class="form-control" id="tipo_id_tipo" name="tipo_id_tipo">
     		  <option value="">Selecione</option>
     		      <?php foreach($this->rowSetTipo as $rowTipo){ ?>
@@ -94,8 +98,8 @@
 
     $(function(){  
           
-        $('#id_uf').change(function(){
-            $('#div_municipios').load('<?php echo $this->baseUrl('usuario/carregar-municipio/id_uf/'); ?>'+ $('#id_uf').val());
+        $('#id_linha').change(function(){
+            $('#div_tipos').load('<?php echo $this->baseUrl('produto/carregar-tipo/id_linha/'); ?>'+ $('#id_linha').val());
         });
     });
 
