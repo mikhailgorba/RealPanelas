@@ -55,9 +55,19 @@
 	    <input type="text" class="form-control" id="tel3" name="tel3" value="<?php echo $this->row['tel3']; ?>">
 	</div>
 	
-    <div class="form-group">
-	    <label for="cliente_tipo">Tipo: </label>
-	    <input type="text" class="form-control" id="cliente_tipo" name="cliente_tipo" value="<?php echo $this->row['cliente_tipo']; ?>">
+    
+    
+     <div class="form-group">
+	    <label for="cliente_tipo">Tipo</label>
+    	<select class="form-control" id="cliente_tipo" name="cliente_tipo">
+    		<option value="Sem cliente_tipo">Selecione</option>
+            <option selected="selected" value="<?php echo $this->$row['cliente_tipo']; ?>"> <?php echo $this->row['cliente_tipo']; ?></option>
+            <option value="Simples"> Simples </option>
+            <option value="Premium"> Premium </option>
+            <option value="Luxo"> Luxo </option>
+            
+    		
+    	</select>
 	</div>
     
 	<div class="text-center">
